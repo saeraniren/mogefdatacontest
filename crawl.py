@@ -11,7 +11,7 @@ import pandas as pd
 
 # 크롬 옵션 설정 (브라우저 안 뜨게 하고 싶으면 headless = True)
 options = Options()
-options.add_argument("--headless")  # 👈 headless 옵션 추가
+options.add_argument("--headless")  # headless 옵션 추가
 options.add_argument("--disable-gpu")  # GPU 비활성화 (headless 모드에서 안정성 향상)
 options.add_argument("--window-size=1920x1080") # 가상 브라우저 크기 설정
 options.add_argument("--no-sandbox")  # (서버 환경에서 안정성 향상)
@@ -83,10 +83,12 @@ for idx, url in enumerate(url_list, start=1):
     if data:
         results.append(data)
         
-# 드라이버 종료 후 재시작 (메모리 관리)
+# 드라이버 종료
 driver.quit()
 
 # 결과를 DataFrame에 저장
 df = pd.DataFrame(results)
 print(df.head())
-    
+
+df.to_csv('crawled_data.csv', index=False, encoding='utf-8-sig')
+print('크롤링 완료 및 CSV 파일 저장 완료')
