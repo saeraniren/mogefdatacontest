@@ -25,7 +25,7 @@ driver = webdriver.Chrome(options=options)
 url_list = []
 
 # selenium을 통한 검색 페이지 접속 및 링크 수집
-for i in range(1, 21):
+for i in range(1, 41):
     url = f'https://section.cafe.naver.com/ca-fe/home/search/articles?q=아이돌봄서비스&t=1744266674263&p={i}'
     driver.get(url)
     time.sleep(1)  # JS 로딩 기다림
@@ -63,13 +63,15 @@ def fetch_selenium(url, idx):
 
         # 제목과 본문 추출
         title_tag = soup.select_one('h3.title_text')
-        content_tag = soup.select_one('div.article_viewer p')
+        content_tag = soup.select_one('div.se-main-container')
+        reply_tag = soup.select_one('span.text_comment')
 
         title_text = title_tag.get_text(strip=True) if title_tag else '제목 없음'
         content_text = content_tag.get_text(strip=True) if content_tag else '내용 없음'
+        reply_text = reply_tag.get_text(strip=True) if reply_tag else '댓글 없음'
 
         print(f'{idx}: 크롤링 완료 → {title_text}')
-        return {'url': url, 'title': title_text, 'content': content_text}
+        return {'url': url, 'title': title_text, 'content': content_text, 'reply': reply_text}
 
     except Exception as e:
         print(f'{idx}번 페이지 에러: {e}')
