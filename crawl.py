@@ -25,23 +25,27 @@ driver = webdriver.Chrome(options=options)
 url_list = []
 
 # selenium을 통한 검색 페이지 접속 및 링크 수집
-for i in range(1, 41):
-    url = f'https://section.cafe.naver.com/ca-fe/home/search/articles?q=아이돌봄서비스&t=1744266674263&p={i}'
-    driver.get(url)
-    time.sleep(1)  # JS 로딩 기다림
+for search_name in ['아이돌봄서비스', '맘시터', '하이시터', '시터넷', '세이프시터', '시터']:
+    # 현재 검색어 출력
+    print(f'검색어: {search_name}')
 
-    # 불러와진 HTML을 BeautifulSoup으로 파싱
-    soup = BeautifulSoup(driver.page_source, 'html.parser')
-    items = soup.select('div.item_list div.ArticleItem')
+    for i in range(1, 41):
+        url = f'https://section.cafe.naver.com/ca-fe/home/search/articles?q={search_name}&t=1744266674263&p={i}'
+        driver.get(url)
+        time.sleep(1)  # JS 로딩 기다림
 
-    print(f'페이지 {i} - 게시글 개수: {len(items)}')
+        # 불러와진 HTML을 BeautifulSoup으로 파싱
+        soup = BeautifulSoup(driver.page_source, 'html.parser')
+        items = soup.select('div.item_list div.ArticleItem')
 
-    # 각 게시글의 링크를 추출하여 리스트에 저장
-    for item in items:
-        link_tag = item.select_one('a')
-        if link_tag:
-            link = link_tag.get('href')
-            url_list.append(link)
+        print(f'페이지 {i} - 게시글 개수: {len(items)}')
+
+        # 각 게시글의 링크를 추출하여 리스트에 저장
+        for item in items:
+            link_tag = item.select_one('a')
+            if link_tag:
+                link = link_tag.get('href')
+                url_list.append(link)
 
 # 저장된 링크 데이터 개수 출력
 print(f'총 수집된 링크 수: {len(url_list)}')
@@ -79,7 +83,7 @@ def fetch_selenium(url, idx):
 
 results = []
 
-# 비동기 실행 메인 함수
+# 실행 메인 함수
 for idx, url in enumerate(url_list, start=1):
     data = fetch_selenium(url, idx)
     if data:
