@@ -1,12 +1,10 @@
-# 🚀 프로젝트 소개
-- 프로젝트명 : 사회 경제적 지표 기반 지역별 아이돌보미 수요 예측 시나리오 분석
+<img src="https://honored-nigella-fc0.notion.site/image/attachment%3Ae7712f5f-3410-40b7-81ff-40fc968e3544%3AWhite_and_Grey_Modern_Business_Research_Proposal_Presentation.png?table=block&id=1f2e008e-cc3a-80b9-bba1-ca685255ae88&spaceId=941bde33-6d61-4dec-a0a5-5165a3ad9646&width=1420&userId=&cache=v2">
+
+# 🚀 사회 경제적 지표 기반 지역별 아이돌보미 수요 예측 시나리오 분석
+
 - 진행 기간 : 2025년 4월 3일 ~ 2025년 5월 9일
 - 프로젝트 활용 목적 : 아이돌봄 서비스 정책 제언
-- 주요 업무 : 데이터 수집 및 전처리, 텍스트 전처리, 워드 클라우드 및 의미연결망 분석, 시나리오 설정및 분석, 모델링 변수 중요도 해석
-- 활용 기술
-    - Selenium을 이용한 웹 자동화 기반 데이터 크롤링
-    - KoNLPy를 이용한 텍스트 전처리 및 워드클라우드 시각화
-    - TF-IDF 기반 단어 간 유사도 계산을 통한 의미 연결망 분석 및 Gephi를 활용한 네트워크 시각화
+- [PPT 바로가기](https://www.canva.com/design/DAGklaJa1ss/x-Z0JlExcqf_rVpjzKYn-w/view?utm_content=DAGklaJa1ss&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h151e16bd3a)
 
 # 👤 프로젝트에서 진행한 역할
 ## 1. Selenium을 활용한 동적 렌더링 페이지 크롤링
