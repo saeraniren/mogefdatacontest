@@ -197,11 +197,11 @@ edges_df.to_csv("term_edges.csv", index=False)
 
 # ❕ 분석 결과
 
-![image.png]([attachment:9477b382-89f9-4da1-9f31-bf7283f204a7:image.png](https://honored-nigella-fc0.notion.site/image/attachment%3A9477b382-89f9-4da1-9f31-bf7283f204a7%3Aimage.png?table=block&id=267e008e-cc3a-80b9-abb4-c1136a62a34c&spaceId=941bde33-6d61-4dec-a0a5-5165a3ad9646&width=2000&userId=&cache=v2))
+<img src="https://honored-nigella-fc0.notion.site/image/attachment%3A9477b382-89f9-4da1-9f31-bf7283f204a7%3Aimage.png?table=block&id=267e008e-cc3a-80b9-abb4-c1136a62a34c&spaceId=941bde33-6d61-4dec-a0a5-5165a3ad9646&width=1420&userId=&cache=v2">
 
 - “서류, 자격, 시간제, 기준, 비용”과 같은 키워드들이 빈번하게 나타난 것으로 보아 **아이돌봄서비스 신청 절차와 유형 관련 글이 많은 것을 파악.**
 
-![image.png]([attachment:ad5640d7-4342-46c1-8632-797f67a043fb:image.png](https://honored-nigella-fc0.notion.site/image/attachment%3Aad5640d7-4342-46c1-8632-797f67a043fb%3Aimage.png?table=block&id=267e008e-cc3a-80c1-a93b-c1d6521f18fd&spaceId=941bde33-6d61-4dec-a0a5-5165a3ad9646&width=2000&userId=&cache=v2))
+<img src="https://honored-nigella-fc0.notion.site/image/attachment%3Aad5640d7-4342-46c1-8632-797f67a043fb%3Aimage.png?table=block&id=267e008e-cc3a-80c1-a93b-c1d6521f18fd&spaceId=941bde33-6d61-4dec-a0a5-5165a3ad9646&width=1420&userId=&cache=v2">
 
 - 맞벌이 또는 복직을 앞둔 가구의 아이돌봄서비스에 대한 수요 뿐만 아니라, **아이돌보미 자격 요건 및 채용공고에 대한 관심이 있음을 확인.**
 
